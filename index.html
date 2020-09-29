@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Scattergories</title>
+	<meta charset=utf-8" />
+	<link rel="stylesheet" type="text/css" href="main.css" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+
+<body>
+  <div class="container">
+    <div id="title">
+      25 Words or Less!
+    </div>
+    <div id="wordlist" class="wordList">
+      <p>Word List</p>
+      <div>
+        <ul>
+          <li><button id="btn1">1</button><span id="wordone">one</span></li>
+          <li><button id="btn2">2</button><span id="wordtwo">two</span></li>
+          <li><button id="btn3">3</button><span id="wordthree">three</span></li>
+          <li><button id="btn4">4</button><span id="wordfour">four</span></li>
+          <li><button id="btn5">5</button><span id="wordfive">five</span></li>
+        </ul>
+      </div>
+    </div>
+    <div id="wordcount" class="wordCountDown">
+      <p>Word's Left</p>
+      <div id="wordCnt">22</div>
+      <button id="BtnWordCnt">Count words</button>
+      <div>
+        <input type="range" min="10" max="25" value="22" step="1" class="slider" id="slideWordCnt">
+      </div>
+    </div>
+    <div id="timecount" class="cntDownTimer">
+      <p>Countdown Timer (sec)</p>
+      <div id="timeCnt">45</div>
+      <button id="BtnTimeCnt">Start Countdown</button>
+      <div>
+        <input type="range" min="45" max="60" value="45" step="5" class="slider" id="slideTimer">
+      </div>
+    </div>
+    <div id="newcard" class="newWordCard">
+      <p>New Card</p>
+      <div id="newMsg">A</div>
+      <button id="BtnNewCard">New Card</button>
+    </div>
+    <div id="start_game" class="dialog">
+      <div id="start_game_message">
+        <h2>Start a new game</h2>
+      </div>
+      <img src="gameBoard.jpg" width="250px" height="250px" />
+      <div class="instruct">
+        <dl>
+          <dt>Aim of the game:</dt>
+          <dd>A team must guess the five '<em>answer words</em>' in the <span style="font-variant: small-caps; font-size: 1.1em;
+              font-weight: 700"><em>Word List</em></span> panel based on '<em>clue words</em>' given by the team's clue giver 
+              in less than 45 seconds to win.
+          </dd>
+          <dt>Team setup:</dt>
+          <dd>Each team comprises of three or more people.  For each round one of the team members will be the clue giver.
+              The host of the game will hold the play device and will be the judge, jury and scorekeeper.
+          </dd>
+          <dt>Game procedure:</dt>
+          <dd><strong>1.</strong> One member from each team will be the clue giver and join the host.
+          </dd>
+          <dd><strong>2.</strong> The host taps the <em><strong>New Card</strong></em> button on the <span style="font-variant: small-caps; font-size: 1.1em;
+              font-weight: 700"><em>New Card</em></span> panel.  This will reset the game for this round.
+          </dd>
+          <dd><strong>3.</strong> The two clue givers will bid for the lowest number of '<em>clue words</em>' they will use to get 
+              their team to guess the five '<em>answer words</em>' within 45 seconds.  The host will use the <em><strong>slider</strong></em> 
+              in the <span style="font-variant: small-caps; font-size: 1.1em; font-weight: 700"><em>Word's Left</em></span> panel to 
+              change the number of words being bid (25 to 10 words). The one with the lowest bid
+              of '<em>clue words</em>' starts the guessing part of the game.
+          </dd>
+          <dd><strong>4.</strong> The guessing part of the game starts by the host tapping on the <em><strong>Start Countdown</strong></em> button on the 
+              <span style="font-variant: small-caps; font-size: 1.1em; font-weight: 700"><em>Countdown Timer</em></span> panel. Everytime the clue giver
+               gives a clue, tap the <em><strong>Count Words</strong></em> button on the <span style="font-variant: small-caps; font-size: 1.1em;
+              font-weight: 700"><em>Word's Left</em></span> panel.  If the team guess the correct '<em>answer word</em>' 
+              tap the red numbered button next to the '<em>answer word</em>' and it will change to green and sound a '<em>ding</em>'
+          </dd>
+          <dd><strong>5.</strong> If all five '<em>answer words</em>' have been guessed before the timer counts down to zero or the word's 
+              left reaches less than zero, the '<em>WON</em>' flag will appear in the <span style="font-variant: small-caps; font-size: 1.1em;
+              font-weight: 700"><em>New Card</em></span> panel and sound a '<em>Hurray! dingy</em>'.
+          </dd>
+          <dd><strong>6.</strong> If either the timer counts down to zero or the word's left is less than zero, the '<em>LOSE</em>' flag will appear in 
+              the <span style="font-variant: small-caps; font-size: 1.1em; font-weight: 700"><em>New Card</em></span> panel and sound a '<em>buzzer</em>'.
+          </dd>
+          <dt>Scoring:</dt>
+          <dd>250 points for the team that wins the round.
+          </dd>
+        </dl>
+      </div>
+      <div class="but_start_game button">
+        New Game
+      </div>
+    </div>
+  </div>
+  <script src="main.js"></script>
+</body>
+</html>
